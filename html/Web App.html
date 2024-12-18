@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to your future!</title>
+</head>
+<body class = "homebg">
+    <a href = "../Jake's Website.html">Home</a> | <a href = "Resume.html">Creator's Resume</a> | <a href = "Best Basketball Players.html">Best Ballers</a>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .fortune {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed #007BFF;
+            background-color: #fff;
+            font-size: 1.2em;
+            color: #007BFF;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .top-links {
+            margin-bottom: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>See your future... If you dare</h1>
+    <div class="fortune" id="fortuneBox">Click the button to get your fortune!</div>
+    <button onclick="generateFortune()">Get Fortune</button>
+
+    <script>
+        const fortunes = [
+            "You will have a great day today!",
+            "An exciting opportunity is coming your way.",
+            "Happiness is within your reach.",
+            "A pleasant surprise is in store for you.",
+            "Your hard work will soon pay off.",
+            "Someone close to you appreciates you more than you know.",
+            "You are capable of achieving your dreams.",
+            "Good news is on its way to you.",
+            "A positive mindset will lead to positive outcomes.",
+            "You are stronger than you think.",
+            "The love of your life will be waiting for you at the next blue moon", 
+            "Be careful next time you go near a swimming pool", 
+    
+
+        ];
+
+        function generateFortune() {
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+            const fortuneBox = document.getElementById('fortuneBox');
+            fortuneBox.textContent = fortunes[randomIndex];
+        }
+    </script>
+</body>
+</html>
